@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#projGrad6)" />
+  <g fill="white" opacity="0.7">
+    <rect x="150" y="100" width="100" height="100" rx="10" />
+    <rect x="130" y="80" width="140" height="20" rx="5" />
+    <rect x="170" y="210" width="60" height="10" rx="5" />
+    <circle cx="180" cy="125" r="10" />
+    <circle cx="220" cy="125" r="10" />
+    <path d="M180,165 Q200,185 220,165" fill="none" stroke="white" stroke-width="2" />
+  </g>
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="16">AI Chat Assistant</text>
+</svg>

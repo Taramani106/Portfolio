@@ -1,0 +1,19 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="conceptGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#conceptGrad1)" />
+  <g fill="none" stroke="white" stroke-width="2" opacity="0.7">
+    <circle cx="200" cy="150" r="60" />
+    <circle cx="200" cy="150" r="40" />
+    <circle cx="200" cy="150" r="20" />
+    <line x1="140" y1="150" x2="260" y2="150" />
+    <line x1="200" y1="90" x2="200" y2="210" />
+    <line x1="158" y1="108" x2="242" y2="192" />
+    <line x1="158" y1="192" x2="242" y2="108" />
+  </g>
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="16">Algorithms & Data Structures</text>
+</svg>

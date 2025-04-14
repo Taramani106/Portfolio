@@ -1,0 +1,19 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#projGrad5)" />
+  <g fill="none" stroke="white" stroke-width="2" opacity="0.6">
+    <polyline points="100,180 140,140 180,160 220,120 260,150 300,100" />
+    <line x1="100" y1="200" x2="300" y2="200" />
+    <line x1="100" y1="100" x2="100" y2="200" />
+    <circle cx="140" cy="140" r="5" fill="white" />
+    <circle cx="180" cy="160" r="5" fill="white" />
+    <circle cx="220" cy="120" r="5" fill="white" />
+    <circle cx="260" cy="150" r="5" fill="white" />
+  </g>
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="16">IoT Analytics Platform</text>
+</svg>

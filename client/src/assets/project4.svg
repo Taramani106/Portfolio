@@ -1,0 +1,19 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#projGrad4)" />
+  <g stroke="white" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M120,80 L280,80 L280,220 L120,220 Z" />
+    <path d="M150,110 L250,110" />
+    <path d="M150,150 L250,150" />
+    <path d="M150,190 L250,190" />
+    <circle cx="130" cy="110" r="5" fill="white" />
+    <circle cx="130" cy="150" r="5" fill="white" />
+    <circle cx="130" cy="190" r="5" fill="white" />
+  </g>
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="16">Data Analytics Dashboard</text>
+</svg>
