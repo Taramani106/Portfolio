@@ -20,37 +20,30 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   // Check local storage for theme or use system preference with a safer implementation
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      // Try to get saved theme from localStorage
       const savedTheme = localStorage.getItem("theme") as Theme | null;
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        // Apply initial class for immediate styling
-        if (savedTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-        }
+      
+      // First check localStorage
+      if (savedTheme === 'dark' || savedTheme === 'light') {
         return savedTheme;
       }
       
-      // Check system preference
+      // Then check system preference
       if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        // Apply initial class for immediate styling
-        document.documentElement.classList.add('dark');
         return "dark";
       }
     }
-    return "light"; // Default fallback
+    return "dark"; // Default to dark theme
   });
 
   useEffect(() => {
-    // Only run in browser environment
     if (typeof document !== 'undefined') {
-      // Apply dark class for Tailwind dark mode
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      // Also set data-theme attribute for other components
+      // Remove both classes first
+      document.documentElement.classList.remove('dark', 'light');
+      // Add the current theme class
+      document.documentElement.classList.add(theme);
+      // Set data-theme attribute
       document.documentElement.setAttribute("data-theme", theme);
+      // Save to localStorage
       localStorage.setItem("theme", theme);
     }
   }, [theme]);
