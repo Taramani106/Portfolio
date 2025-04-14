@@ -45,6 +45,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       document.documentElement.setAttribute("data-theme", theme);
       // Save to localStorage
       localStorage.setItem("theme", theme);
+      // Force black background
+      document.documentElement.style.backgroundColor = '#000000';
+      document.body.style.backgroundColor = '#000000';
+      document.documentElement.style.color = '#ffffff';
     }
   }, [theme]);
 
