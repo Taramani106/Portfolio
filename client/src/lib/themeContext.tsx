@@ -7,28 +7,24 @@ interface ThemeContextType {
   theme: Theme;
 }
 
-// Default context value
 const defaultContextValue: ThemeContextType = {
   theme: "dark"
 };
 
-// Create context
 const ThemeContext = createContext<ThemeContextType>(defaultContextValue);
 
-// Provider
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme] = useState<Theme>("dark"); // Always dark
+  const [theme] = useState<Theme>("dark");
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      // Add dark class
+    if (typeof document !== "undefined") {
+      // Remove light theme if any
+      document.documentElement.classList.remove("light");
+      // Apply dark class
       document.documentElement.classList.add("dark");
-      // Optional: add data-theme for libraries like DaisyUI
+      // Use data-theme for libraries like DaisyUI or custom theming
       document.documentElement.setAttribute("data-theme", theme);
-      // Force dark styles
-      document.documentElement.style.backgroundColor = "#000000";
-      document.body.style.backgroundColor = "#000000";
-      document.documentElement.style.color = "#ffffff";
+      // DON'T override styles with JS — animations need class-based styling
     }
   }, [theme]);
 
@@ -39,7 +35,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   );
 }
 
-// Hook to use the theme (if needed)
 export function useTheme() {
   return useContext(ThemeContext);
 }
